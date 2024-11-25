@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent neutral color */
+  color: #333; /* Neutral dark text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+#header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center links horizontally */
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+  padding: 0;
+}
+
+#header ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+#header ul li a:hover {
+  color: #555; /* Slightly darker hover effect */
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Home Section */
+.section {
+  background-color: #f5f5dc; /* Light brown color */
+  padding: 20px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.social-media {
+  margin-top: 5px;
+}
+
+.social-media a {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #666;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-media a:hover {
+  color: #4caf50;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.about-me {
+  margin-top: 10px;
+}
+
+.about-me h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.about-me p {
+  font-size: 16px;
+  color: #666;
+}
+
+#projects {
+  background-color: #f5f5dc;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.projects-header hr {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  width: 80%; /* Limit the width of the line */
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #f5f5dc;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width for the cards */
+  box-sizing: border-box;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card .year {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.card .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card .badges span {
+  background-color: #c9a66b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
