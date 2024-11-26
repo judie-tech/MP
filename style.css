@@ -9,42 +9,42 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Navbar Styles */
 #header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Translucent neutral color */
-  color: #333; /* Neutral dark text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  z-index: 1000;
-  padding: 10px 0;
+  position: fixed; /* Floating effect at the top */
+  top: 10px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  width: 80%; /* Enlarged for an oval shape */
+  max-width: 800px; /* Restrict maximum width */
+  backdrop-filter: blur(10px); /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 50px; /* Creates the oval shape */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 15px 30px; /* Adds vertical and horizontal space */
+  z-index: 1000; /* Ensures it appears above other content */
 }
 
-#header nav {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Center Menu Items */
+#header nav ul {
   display: flex;
-  justify-content: center; /* Center links horizontally */
-}
-
-#header ul {
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  display: flex;
-  gap: 20px; /* Space between links */
-  padding: 0;
+  gap: 30px; /* Adds spacing between items */
 }
 
-#header ul li a {
+#header nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease; /* Smooth hover effect */
+  color: black; /* Black text */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-#header ul li a:hover {
-  color: #555; /* Slightly darker hover effect */
+#header nav ul li a:hover {
+  color: #ff7f50; /* Highlight color */
 }
-
 /* Sections */
 .section {
   min-height: 100vh;
@@ -73,6 +73,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  gap: 2px;
 }
 
 .profile-picture {
@@ -223,4 +224,193 @@ hr {
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 14px;
+}
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5dc; /* Match theme */
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black; /* Creative accent color */
+}
+
+.skills-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #c9a66b; /* Highlight border */
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.skill-item:hover {
+  background-color: #c9a66b; /* Theme accent color */
+  transform: translateY(-10px);
+  color: #fff;
+}
+
+.skill-item:hover p {
+  color: #fff;
+}
+/* Contact Section */
+.contact-section {
+  background-color: #f5f5dc; /* Light brown color */
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black; /* Theme color for contrast */
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Set a maximum width for the section */
+  margin: 0 auto; /* Center the container */
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Limit the width of each container */
+  margin: 0 auto; /* Center the containers */
+  height: 300px; /* Set a fixed height */
+  max-height: 400px; /* Ensure containers don’t grow too tall */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+}
+
+.contact-info {
+  padding: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item img {
+  width: 25px;
+  height: 25px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-title {
+  font-size: 1rem;
+  color: black; /* Theme color */
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #c9a66b; /* Theme color */
+}
+
+.submit-btn {
+  background-color: #db900f; /* Theme color */
+  color: #fff;
+  padding: 12px 25px; /* Reduced padding */
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #412a03; /* Darker shade of theme color */
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px; /* Reduced gap between sections */
+  }
+  .contact-info,
+  .contact-form {
+    max-width: 90%; /* Make containers take up more width on small screens */
+    margin: 0 auto; /* Center containers on smaller screens */
+    height: auto; /* Allow containers to adjust their height on smaller screens */
+  }
 }
